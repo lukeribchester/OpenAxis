@@ -1,5 +1,9 @@
 /* OpenAxis */
 
+body {
+    background-color: rgb(250, 250, 250);
+}
+
 /* Drawer */
 .openaxis-icons {
     margin-right: 12px;
@@ -12,6 +16,26 @@
 }
 
 /* Main */
+main {
+    margin: 32px 16px;
+}
+.openaxis-container {
+    max-width: 1044px;
+    margin: 0 auto;
+    text-align: center;
+}
+.openaxis-content {
+    margin: 32px 0 128px 0;
+}
+.openaxis-camera__image img {
+    border: 1px solid rgb(66, 66, 66);
+}
+.openaxis-camera__image--overview img {
+    width: 49%;
+}
+.openaxis-camera__image--single img {
+    width: 98%;
+}
 /* Stream */
 /* Table */
 

@@ -1,0 +1,28 @@
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-tabs__tab-bar">
+        <a href="#overview-panel" class="mdl-tabs__tab is-active">Overview</a>
+        <a href="#frontcamera-panel" class="mdl-tabs__tab">Front</a>
+        <a href="#rearcamera-panel" class="mdl-tabs__tab">Rear</a>
+    </div>
+    <div class="mdl-tabs__panel openaxis-container is-active" id="overview-panel">
+        <main class="mdl-layout__content openaxis-content openaxis-camera__image--overview">
+            <img id="openaxis-frontcamera-overview"
+                 src="http://root:password123@192.168.1.12/axis-cgi/jpg/image.cgi?resolution=1024x768&camera=4&textstring=&">
+            <img id="openaxis-rearcamera-overview"
+                 src="http://root:password123@192.168.1.15/axis-cgi/jpg/image.cgi?resolution=1024x768&textstring=&">
+        </main>
+    </div>
+    <div class="mdl-tabs__panel openaxis-container" id="frontcamera-panel">
+        <main class="mdl-layout__content openaxis-content openaxis-camera__image openaxis-camera__image--single">
+            <img id="openaxis-frontcamera"
+                 src="http://root:password123@192.168.1.12/axis-cgi/jpg/image.cgi?resolution=1024x768&camera=4&">
+        </main>
+    </div>
+    <div class="mdl-tabs__panel openaxis-container" id="rearcamera-panel">
+        <main class="mdl-layout__content openaxis-content openaxis-camera__image--single">
+            <img id="openaxis-rearcamera"
+                 src="http://root:password123@192.168.1.15/axis-cgi/jpg/image.cgi?resolution=1024x768">
+        </main>
+    </div>
+</div>
+<script src="/public/javascripts/load_image.js"></script>
