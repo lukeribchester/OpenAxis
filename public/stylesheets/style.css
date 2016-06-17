@@ -1,7 +1,7 @@
 /* OpenAxis */
 
 body {
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(247,247,247);
 }
 
 /* Drawer */
@@ -16,17 +16,20 @@ body {
 }
 
 /* Main */
-main {
-    margin: 32px 16px;
-}
-.openaxis-container {
+.openaxis-content {
     max-width: 1044px;
     margin: 0 auto;
+    padding: 0 0 32px 0;
     text-align: center;
 }
-.openaxis-content {
-    margin: 32px 0 128px 0;
+.openaxis-content--noheader {
+    max-width: 1044px;
+    margin: 0 auto;
+    padding: 32px 0 32px 0;
+    text-align: center;
 }
+
+/* Stream */
 .openaxis-camera__image img {
     border: 1px solid rgb(66, 66, 66);
 }
@@ -36,12 +39,45 @@ main {
 .openaxis-camera__image--single img {
     width: 98%;
 }
-/* Stream */
+
+/* Tabs */
+.openaxis__tabs-tab-bar--double {
+    height: 72px;
+}
+.openaxis__tabs-tab--double {
+    height: 72px;
+}
+.openaxis__tabs-tab--double span {
+    display: block;
+    font-size: 12px;
+    line-height: 6px;
+}
+
 /* Table */
+
+/* Form */
+.openaxis-forms__login {
+    margin: 0 auto;
+    background-color: #fff;
+}
+.openaxis-forms__login #signIn {
+    width: 100%;
+    font-size: 13px;
+    line-height: 28px;
+    padding: 0 12px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid rgb(96,125,139);
+}
+.openaxis-forms__input {
+    display: block;
+    margin: 0 auto;
+}
 
 /* Footer */
 footer {
     margin: 0;
+    z-index: 99;
 }
 footer button {
     display: block;
@@ -62,4 +98,10 @@ footer button {
     max-width: 1044px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Miscellaneous */
+::selection {
+    color: rgb(247,247,247);
+    background-color: rgb(125,125,125);
 }

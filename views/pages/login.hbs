@@ -1,0 +1,33 @@
+<main class="mdl-layout__content">
+    <div class="openaxis-content">
+        <h1 class="mdl-typography--display-2 mdl-typography--font-light">
+            OpenAxis
+        </h1>
+        <h2 class="mdl-typography--title mdl-typography--font-light">
+            Sign in to access OpenAxis
+        </h2>
+        <div class="mdl-card mdl-shadow--2dp openaxis-forms__login">
+            <div class="mdl-card__supporting-text">
+                The default username and password combination is 'root' and 'pass'.
+            </div>
+            <form action="/login" method="post" class="openaxis-forms__login">
+                <div class="mdl-card__supporting-text">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label openaxis-forms__input">
+                        <input id="username" name="username" class="mdl-textfield__input" type="text" autofocus>
+                        <label for="username" class="mdl-textfield__label">Username...</label>
+                    </div>
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label openaxis-forms__input">
+                        <input id="password" name="password" class="mdl-textfield__input" type="password">
+                        <label for="password" class="mdl-textfield__label">Password...</label>
+                    </div>
+                </div>
+
+                <div class="mdl-card__actions mdl-card--border">
+                    <input id="signIn" type="submit" value="Sign in"
+                           class="mdl-button--colored mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

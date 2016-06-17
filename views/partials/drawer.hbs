@@ -13,10 +13,21 @@
             <i class="material-icons openaxis-icons">archive</i>
             <span>Archive</span>
         </a>
-        <div class="openaxis-separator--drawer"></div>
-        <a class="mdl-navigation__link" href="#">
-            <i class="material-icons openaxis-icons">exit_to_app</i>
-            <span class="mdl-typography--font-bold">Logout</span>
+        <hr>
+        <a class="mdl-navigation__link" href="/settings">
+            <i class="material-icons openaxis-icons">build</i>
+            <span>Settings</span>
         </a>
+        {{#if user}}
+        <a class="mdl-navigation__link" href="/logout">
+            <i class="material-icons openaxis-icons">do_not_disturb_on</i>
+            <span class="mdl-typography--font-bold">Sign out</span>
+        </a>
+        {{else}}
+        <a class="mdl-navigation__link" href="/login">
+            <i class="material-icons openaxis-icons">exit_to_app</i>
+            <span class="mdl-typography--font-bold">Sign in</span>
+        </a>
+        {{/if}}
     </nav>
 </div>
