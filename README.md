@@ -4,6 +4,7 @@ NodeJS app for viewing real-time and archived video from network cameras.
 ## To do
 ### General
 - Local authentication
+
 ### Stream
 - Fix HTTP camera auth issue on Chrome for Android
 - Fix display of tab content on page load
