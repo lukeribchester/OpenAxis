@@ -11,14 +11,15 @@ var assert = require('assert');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var db = require('./db');
+var schedule = require('node-schedule');
 
 var routes = require('./routes/index');
 
 // connect to mongodb database
-var url = 'mongodb://localhost:27017/openaxis_test';
+var url = 'mongodb://localhost:27017/openaxis';
 MongoClient.connect(url, function (err, db) {
     assert.equal(null, err);
-    console.log("Connected to MongoDB server.");
+    console.log("Successfully connected to MongoDB server");
     db.close();
 });
 
@@ -117,5 +118,8 @@ app.use(function (err, req, res, next) {
     });
 });
 
+// file index scheduler
+// var j = schedule.scheduleJob('*/5 * * * *', function() {
+// });
 
 module.exports = app;
