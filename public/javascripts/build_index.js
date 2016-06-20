@@ -27,6 +27,7 @@
     var start = new Date().getTime() / 1000;
 
 
+    /* To-Do: Utilise Mongoose */
     /** MongoDB initialize */
     var url = 'mongodb://localhost:27017/openaxis';
     MongoClient.connect(url, function (err, db) {
@@ -177,3 +178,8 @@
         console.log("Indexing of " + fileCount + " files completed with " + errorCount + " errors");
     });
 }());
+
+/**
+ * #TeamGrimmie
+ * Never forgotten.
+ */

@@ -22,22 +22,11 @@ body {
     padding: 0 0 32px 0;
     text-align: center;
 }
-.openaxis-content--noheader {
-    max-width: 1044px;
-    margin: 0 auto;
-    padding: 32px 0 32px 0;
-    text-align: center;
-}
 
-/* Stream */
-.openaxis-camera__image img {
+/* Live */
+.openaxis-camera__image {
+    background-color: rgb(240,240,240);
     border: 1px solid rgb(66, 66, 66);
-}
-.openaxis-camera__image--overview img {
-    width: 49%;
-}
-.openaxis-camera__image--single img {
-    width: 98%;
 }
 
 /* Tabs */
@@ -103,5 +92,5 @@ footer button {
 /* Miscellaneous */
 ::selection {
     color: rgb(247,247,247);
-    background-color: rgb(125,125,125);
+    background-color: rgb(96,125,139);
 }
