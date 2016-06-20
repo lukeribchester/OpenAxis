@@ -1,0 +1,33 @@
+<main class="mdl-layout__content">
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+            <!-- Set 'active' to latest/max datetime in db -->
+            {{#each weekOfYearIsoRange}}
+            <a href="/year/{{../year}}/week/{{this}}/day/{{this.[1]}}/hour/{{../hour}}" class="mdl-tabs__tab">Week {{this}}</a>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar openaxis__tabs-tab-bar--double">
+            <!-- Set 'active' to latest/max datetime in db -->
+            {{#each daysOfWeekIsoRange}}
+            <a href="/year/{{../year}}/week/{{../week}}/day/{{this.[1]}}/hour/{{../hour}}"
+               class="mdl-tabs__tab openaxis__tabs-tab--double">{{this.[0]}}<span>{{this.[1]}}</span></a>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+            <!-- Set 'active' to latest/max datetime in db -->
+            <a href="/year/{{year}}/week/{{week}}/day/{{day}}/hour/0000-0559" class="mdl-tabs__tab">00:00 - 05:59</a>
+            <a href="/year/{{year}}/week/{{week}}/day/{{day}}/hour/0600-1159" class="mdl-tabs__tab">06:00 - 11:59</a>
+            <a href="/year/{{year}}/week/{{week}}/day/{{day}}/hour/1200-1759" class="mdl-tabs__tab">12:00 - 17:59</a>
+            <a href="/year/{{year}}/week/{{week}}/day/{{day}}/hour/1800-2359" class="mdl-tabs__tab">18:00 - 23:59</a>
+        </div>
+    </div>
+
+    Debug:
+    rangeIsoWeeks: {{rangeIsoWeeks}}
+</main>

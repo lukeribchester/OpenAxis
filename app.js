@@ -6,8 +6,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
+var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var db = require('./db');
@@ -16,12 +15,7 @@ var schedule = require('node-schedule');
 var routes = require('./routes/index');
 
 // connect to mongodb database
-var url = 'mongodb://localhost:27017/openaxis';
-MongoClient.connect(url, function (err, db) {
-    assert.equal(null, err);
-    console.log("Successfully connected to MongoDB server");
-    db.close();
-});
+mongoose.connect('mongodb://localhost:27017/openaxis');
 
 // Passport configuration
 // configure passport-local strategy
@@ -83,7 +77,6 @@ app.use(function (req, res, next) {
 // initialise passport, restore session authentication state
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 app.use('/', routes);
 

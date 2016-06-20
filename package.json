@@ -17,12 +17,14 @@
     "hbs": "~3.1.0",
     "moment": "^2.13.0",
     "mongodb": "^2.1.18",
+    "mongoose": "^4.5.1",
     "morgan": "~1.6.1",
     "node-schedule": "^1.1.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "python-shell": "^0.4.0",
     "serve-favicon": "~2.3.0",
+    "underscore": "^1.8.3",
     "walk": "^2.3.9",
     "xml2js": "^0.4.16"
   }
